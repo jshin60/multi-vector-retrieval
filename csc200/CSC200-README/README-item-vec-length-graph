@@ -1,0 +1,3 @@
+This python file takes one command line argument which is the name of the <dataset name>_lengths.txt file generated when running
+muvera. It then generates a bar plot of the distribution of data of the given dataset. This python file and <dataset name>_lengths.txt
+must be in the same repository.

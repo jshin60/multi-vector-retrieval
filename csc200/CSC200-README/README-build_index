@@ -1,0 +1,5 @@
+Change the path to where the Dataset folder is on line 35. Line 36 is where you can indicate what top k ground truths you want to
+generate. When runninng the script, one gives a command line argument that is the name of the folder which contains the
+ground truths one wants to generate. For instance, if one wants ground truths for lotte-500-gnd-p1, the following
+command line argument would be given:
+    python3.10 build_index.py lotte-500-gnd-p1

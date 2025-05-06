@@ -1,0 +1,58 @@
+This is an extension of the following repository:
+    https://github.com/DBGroup-SUSTech/multi-vector-retrieval
+
+To run the repository you need Python 3.10 and (roughly) the following packages and libraries installed:
+
+tqdm 
+torch 
+ujson 
+git 
+numpy
+transformers 4.49
+pandas
+pybind11
+faiss-cpu
+ninja
+ninja-build
+cuda 12.7
+Gcc10
+G++ 10
+CMake 3.30.8
+Parley
+Spdlog
+MKL
+Eigen 3.4.0
+
+To compile the repository you need to follow the instructions from https://github.com/DBGroup-SUSTech/multi-vector-retrieval.
+Compiling the CMakeLists.txt file can be done with:
+    Cmake CMakeLists.txt 
+from the directory the file is in. This needs to be followed by running the Makefile itself.
+
+For compilation of the main CMakeLists.txt file, one may need to set the path to certian libraries. Where we have changed
+the path to a specific folder in the CMakeLists.txt file has a commnet as follows near it:
+    #CHANGE TO YOUR PATH
+
+If one is having issues compiling from this fork of the repository, the only changes from the multi-vector-retreival folder
+are in the evaluation and data folders (within the script folder). As such one can also get the source repository
+https://github.com/DBGroup-SUSTech/multi-vector-retrieval running and replace the data and evaluation folders with the one from this repository. 
+
+There are additional READMEs for new or altered code.
+
+Below is instructions on how to set up new partitions:
+
+In the Dataset/mulit-vector-retrieval/Embeddings folder create a folder with the following naming scheme:
+    <name of dataset>-<partition name>
+This folder must contain a base-embedding folder as well as a copy of the query_embedding.npy file from
+the original dataset. 
+
+In the Dataset/mulit-vector-retrieval/Index folder create a copy of the dataset index folder and rename it to:
+    <name of dataset>-<partition name>
+
+In the Dataset/mulit-vector-retrieval/RawData folder create a folder with the name:
+    <name of dataset>-<partition name>
+Further create a folder with the name:
+    document
+and include an empty file named collection.tsv in the folder.
+
+
+Note: distribution_test.py and parallel.py are not used in any form in this project or repository.

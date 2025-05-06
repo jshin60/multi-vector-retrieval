@@ -1,0 +1,10 @@
+Any place where one needs to provide the path to the csc200 folder is marked with #CHANGE TO YOUR PATH.
+Note the script assumes you are storing the repository in a home directory, if one is storing it in a different
+directory (i.e. the path to the csc200 folder is /u/.../csc200), all instances of home must be changed. 
+
+The altered script file takes 4 command line arguments, the name of the dataset (or partition), the k valule, the
+d-proj, and the r-reps. So if one wants to run Muvera on lotte-500-gnd with k = 10 d = 8 r = 20, then the command line argument 
+would look like the following:
+    python3.10 eval_muvera.py lotte-500-gnd 10 8 20
+Running Muvera will also produce a file named <what was run>_lengths.txt that includes data that can be fed to 
+item_vec_length_graph.py to generate a distribution plot.

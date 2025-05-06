@@ -1,0 +1,22 @@
+There are 8 python scripts that implement some version of the extension. If it is marked with a _s at the end, then it is
+from the partitioning scheme mentioned and analyzed in the paper submission. Otherwise, it is similar, but instead of
+sorting the partition results at the end, it simply reruns Muvera on the top k values among the partitions. Regardless,
+all such scripts take similar inputs.
+
+For all scripts path_to refers to the path to the Dataset folder. path_to_code refers to the path to the
+csc200 folder. path_to should not end with a '\', but path_to_code should. partition_names refers to the
+partition folders that will be utilized. So for each partition name in the list it will use the folders:
+    dataset_name-partition_name[i]
+when running the script to run and stor partition results. The d_proj and r_reps arrays indicate the d_projs and r_reps 
+of each partition. The _s versions should have the same number of partition names, d_proj, and r_reps. The non _s ones should have one additional d_proj and r_rep for the final recombination muvera run. top_k indicates the the top k closest results you want to
+generate. k_sim and n_candidate should be the same values as they are in the eval_muvera.py script (this is by defualt set up for
+this repository, but if you want to change these values, you need to change them in two locations). q refers to the number of queries
+that will be run (the ammount for lotte-500-gnd is 100). If Parallel = True, then instances of Muvera will be run in parallel,
+otherwise they will run sequentially. build_index will build ground truths for each partition for you if true is given. Note that
+you are required to have a groundtruths file of K for any input (partition or dataset) for this implementation of Muvera.
+
+For non _s versions a seperate partition <dataset name>-re must be made the same way any other partition is made.
+
+The main scripts used for the submission (the ones with _s) output time data as <dataset name>_topk_scheme_time.txt
+and the recombined results as stats_for_topk.txt. All of our test results are in lotte-550-gnd-parallel-results_sorted,
+lotte-550-gnd-sequential-results_sorted, and lotte-550-gnd-results. 

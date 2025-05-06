@@ -1,0 +1,6 @@
+This python file takes a gound truth file and a test file and calculates the average Prescision, Recall, F1, and F0.5 for 
+K = 1 to some user specified value n. 
+
+Line 6 is the path to the folder hwere the ground truth file is in, line 7 i the path to where the test file is in,
+line 8 is the name of the ground truth file, and line 9 is the name of the test file. q refers to the number of
+queries from the test file and k the highest @k one wants to calculate.
