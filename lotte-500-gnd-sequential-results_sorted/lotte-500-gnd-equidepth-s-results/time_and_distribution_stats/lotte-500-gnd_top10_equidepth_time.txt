@@ -1,0 +1,5 @@
+Number of datapoints in combination consideration: 0
+Elapsed extraction time: 0.062075680999896576
+Elapsed partition time: 0.00027442900000096415
+Elapsed write time: 0.04444235899995874
+Elapsed recombination time: 0.007080783999981577
