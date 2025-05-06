@@ -1,6 +1,10 @@
 This is an extension of the following repository:
     https://github.com/DBGroup-SUSTech/multi-vector-retrieval
 
+Note: Follow the original repositories instructions on setting up Colbert pretrain. The script we use to generate ground truths runs the ground_truths.py file
+after doing something with Colbert. So although we are not interested in Colbert, it still needs to be set up properly to run some of the necessary code for this
+project.
+
 To run the repository you need Python 3.10 and (roughly) the following packages and libraries installed:
 
 tqdm 
