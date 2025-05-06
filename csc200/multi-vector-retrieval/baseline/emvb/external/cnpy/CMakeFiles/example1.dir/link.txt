@@ -1,0 +1,1 @@
+/usr/bin/g++  -O0 -march=native -fopenmp -std=c++11 -g -rdynamic CMakeFiles/example1.dir/example1.cpp.o -o example1   -L/home/jshin/csc200/.local/lib/x86_64-linux-gnu  -Wl,-rpath,/home/jshin/csc200/multi-vector-retrieval/baseline/emvb/external/cnpy:/home/jshin/csc200/.local/lib/x86_64-linux-gnu libcnpy.so -lz

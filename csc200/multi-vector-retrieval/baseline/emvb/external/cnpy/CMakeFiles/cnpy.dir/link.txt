@@ -1,0 +1,1 @@
+/usr/bin/g++ -fPIC  -O0 -march=native -fopenmp -std=c++11 -g -shared -Wl,-soname,libcnpy.so -o libcnpy.so CMakeFiles/cnpy.dir/cnpy.cpp.o   -L/home/jshin/csc200/.local/lib/x86_64-linux-gnu  -Wl,-rpath,/home/jshin/csc200/.local/lib/x86_64-linux-gnu: -lz
